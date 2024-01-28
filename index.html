@@ -1,44 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- google fonts  -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-            <!-- tailwind and daisy ui  -->
+        <!-- fontawesome  -->
 
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://kit.fontawesome.com/37a0095394.js" crossorigin="anonymous"></script>
+
+    <!-- tailwind and daisy ui  -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
 
-        <!-- tailwind custom designs  -->
-        <script>
-            tailwind.config = {
-              theme: {
-                extend: {
-                  colors: {
-                    clifford: '#da373d',
-                    'hockey-primary': '#da373d',
-                  }
-                }
-              }
-            }
-        </script>
+    <!-- tailwind custom designs  -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "hockey-primary": "#FF4240",
+            },
+          },
+        },
+      };
+    </script>
 
-<style>
-    * {
-        font-family: 'Manrope', sans-serif;
+    <style>
+      * {
+        font-family: "Manrope", sans-serif;
         margin: 0;
         padding: 0;
-    }
-</style>
+      }
+    </style>
     <title>Durnibar's</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body class="container mx-auto p-4">
+    <header>
+
+        <!-- navbar section  -->
+
+      <div class="navbar my-6">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden p-0">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+            <li><a class="text-hockey-primary text-base font-bold">Home</a></li>
+            <li><a class="text-base font-normal">About</a></li>
+            <li><a class="text-base font-normal">Pages</a></li>
+            <li><a class="text-base font-normal">Blog</a></li>
+            <li><a class="text-base font-normal">Contact</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost gap-0 font-extrabold text-xl lg:text-4xl"
+            >Durnibar<span class="text-hockey-primary">’</span>s</a
+          >
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a class="text-hockey-primary text-base font-bold">Home</a></li>
+            <li><a class="text-base font-normal">About</a></li>
+            <li><a class="text-base font-normal">Pages</a></li>
+            <li><a class="text-base font-normal">Blog</a></li>
+            <li><a class="text-base font-normal">Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end"> 
+            <i class="fa-solid fa-magnifying-glass hidden lg:block mr-2 text-2xl"></i>
+          <a class="btn bg-hockey-primary text-white text-xl font-bold">Get Ticket</a>
+        </div>
+      </div>
+
+      <!-- banner section  -->
+
+    <section class="relative">
+
+      <div class="carousel w-full">
+        <div id="slide1" class="carousel-item relative w-full">
+          <img src="./Images/1.png" class="w-full" />
+          <div class="absolute flex justify-center lg:justify-start gap-6 transform left-5 right-5 top-3/4">
+            <a href="#slide3" class="btn btn-circle bg-black text-white">❮</a> 
+            <a href="#slide2" class="btn btn-circle  bg-black text-white">❯</a>
+          </div>
+        </div> 
+        <div id="slide2" class="carousel-item relative w-full">
+          <img src="./Images/slide2.png" class="w-full" />
+          <div class="absolute flex justify-center lg:justify-start gap-6 transform left-5 right-5 top-3/4">
+            <a href="#slide1" class="btn btn-circle  bg-black text-white">❮</a> 
+            <a href="#slide3" class="btn btn-circle  bg-black text-white">❯</a>
+          </div>
+        </div> 
+        <div id="slide3" class="carousel-item relative w-full">
+          <img src="./Images/slide3.png" class="w-full" />
+          <div class="absolute flex justify-center lg:justify-start gap-6 transform left-5 right-5 top-3/4">
+            <a href="#slide2" class="btn btn-circle  bg-black text-white">❮</a> 
+            <a href="#slide1" class="btn btn-circle  bg-black text-white">❯</a>
+          </div>
+        </div> 
+      </div>
+
+      <!-- meet all the heros portion  -->
+
+      <div class="bg-[#131318] w-full lg:w-[500px] p-4 lg:p-8 rounded-2xl static lg:absolute right-4 bottom-8">
+        <h3 class="text-white text-2xl font-extrabold">Meet all the heroes from the field</h3>
+        <p class="text-[#FFFFFF99] text-base font-medium">On the frozen canvas, our hockey club paints dreams in every stride.In the arena, where ice meets ambition, our hockey club writes its legacy</p>
+      </div>
+      
+    </section>
+
+    </header>
+
+    <main>
+
+        <!-- professional hocky's club section  -->
+
+        <section class="my-24">
+            <div>
+                <h3 class="text-3xl font-extrabold text-center mx-auto">Professional Hockeys Club</h3>
+                <p class="text-[#13131899] text-base font-medium text-center max-w-[550px] mx-auto my-6">Where the ice meets the puck, and passion meets purpose – that's where our hockey club finds its home.</p>
+            </div>
+
+                <!-- radial progress  -->
+
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 my-10">
+                
+            <div class="text-center">
+                <div class="radial-progress text-[#FF4240] mx-auto" style="--value:87; --size:7rem; rotate:150deg;" ><span class="text-black text-3xl font-extrabold rotate-[209deg]">87%</span>
+                </div>
+                <h3 class="text-xl font-semibold my-4">Prayer Facility</h3>
+                <p class="text-base text-[#13131899] max-w-[250px] mx-auto">"In the glow of our prayer room, may our hockey family find solace, strength, and a shared vision.</p>
+            </div>
+
+            <div class="text-center">
+                <div class="radial-progress text-[#49D293]" style="--value:87; --size:7rem; rotate:150deg;" ><span class="text-black text-3xl font-extrabold rotate-[209deg]">95%</span></div>
+                <h3 class="text-xl font-semibold my-4">Experienced Coach</h3>
+                <p class="text-base text-[#13131899] max-w-[250px] mx-auto">our experienced hockey coach orchestrates brilliance on the ice.</p>
+            </div>
+
+                <div class="text-center">
+                    <div class="radial-progress text-[#FFB546]" style="--value:87; --size:7rem; rotate:150deg;" ><span class="text-black text-3xl font-extrabold rotate-[209deg]">90%</span></div>
+                <h3 class="text-xl font-semibold my-4">Senior Player</h3>
+                <p class="text-base text-[#13131899] max-w-[250px] mx-auto">In the heart of the team, our senior players stand tall, a beacon of experience, guiding the next generation with wisdom and finesse</p>
+                </div>
+                <div class="text-center">
+                    <div class="radial-progress text-[#4C8DF1]" style="--value:87; --size:7rem; rotate:150deg;" ><span class="text-black text-3xl font-extrabold rotate-[209deg]">80%</span></div>
+                    <h3 class="text-xl font-semibold my-4">Training Ground</h3>
+                    <p class="text-base text-[#13131899] max-w-[250px] mx-auto">"In the crisp air of determination, our training ground becomes the canvas for skill development and team synergy.</p>
+                </div>
+              
+        </div>
+
+        </section>
+
+    </main>
+
+  </body>
 </html>
